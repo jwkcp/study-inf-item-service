@@ -34,6 +34,13 @@ public class ItemRepository {
         item.setPrice(updateParam.getPrice());
     }
 
+    public void update(Item updateParam) {
+        Item item = store.get(updateParam.getId());
+        item.setItemName(updateParam.getItemName());
+        item.setQuantity(updateParam.getQuantity());
+        item.setPrice(updateParam.getPrice());
+    }
+
     public void clearStore() {
         store.clear();
     }
